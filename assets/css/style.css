@@ -1,0 +1,18 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#current-weather div {
+    padding: 9px 33px;
+    background-color: aliceblue;
+    line-height: 2;
+    font-size: 18px;
+}
+
+#forecast div {
+    margin: 10px;
+    padding: 9px 6px;
+    background-color: aliceblue;
+    line-height: 2;
+    font-size: 16px;
+}

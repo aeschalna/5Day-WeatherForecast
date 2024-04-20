@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>5 Day Weather Forecast</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <!-- Bulma Stylesheet -->
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- My Stylesheet -->
+</head>
+
+<body>
+    <!-- Title Banner -->
+    <div class="container is-widescreen has-text-centered has-background-link">
+        <div class="notification is-link is-size-3">Weather Dashboard</div>
+    </div>
+    <!-- Form for city search-->
+    <div class="fixed-grid has-6-cols">
+        <div class="grid">
+            <div class="cell has-background-primary-90 has-text-primary-80-invert ml-6 mt-5 p-4">
+                <form id="input-location">
+                    <label for="city">Search for a city:</label>
+                    <input class="mt-2 is-size-6" type="text" id="city" placeholder="Input City [Name Only]">
+                    <button class="button is-primary is-outlined mt-3" type="submit" id="search">Submit</button>
+                </form>
+                <!-- Submit Search Button => Must convert to coords -->
+            </div>
+
+            <div class="container p-4 mt-4">
+                <h1 class="notification is-primary has-text-centered">Search History</h1>
+                <ul id="search-history"></ul>
+            </div>
+            <!-- Box to display search history for cities searched -->
+
+            <div class="cell is-col-start-3 is-col-span-2 has-text-centered mt-5 p-4 is-size-4">
+                <p class="subtitle">Here's the current weather in your city!</p>
+                <div class="container has-text-info-dark mt-5" id="current-weather"></div>
+                <!-- Box to display current weather for city searched -->
+            </div>
+        </div>
+
+        <section class="hero">
+            <div class="hero-body" id="forecast"></div>
+        </section>
+
+        <!-- My Javascript -->
+        <script defer src="assets/js/script.js"></script>
+</body>
+
+</html>
