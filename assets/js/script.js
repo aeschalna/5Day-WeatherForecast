@@ -89,8 +89,16 @@ function displaySavedSearches() {
     citiesEl.innerHTML = '';
     // loop through array
     searches.forEach(city => {
-        const result = document.createElement("li");
+        const result = document.createElement("button");
         result.textContent = city;
+        result.classList.add('city-button');
+        // add event listener for each button
+        result.addEventListener('click', () => {
+            fetchWeather(city);
+            saveSearchtoStorage(city);
+            fetchForecast(city);
+            displaySavedSearches();
+        });
 
         citiesEl.appendChild(result);
     })
@@ -139,49 +147,17 @@ function renderForecast(data) {
         // Create a card element for each day's forecast
         const forecastCard = document.createElement('div');
         forecastCard.classList.add('forecast-card');
-        forecastCard.innerHTML = `<p>Date: ${date.toLocaleDateString()}</p>
-    <p>Weather: ${weatherIcon}</p>
-    <p>Temperature: ${temperature.toFixed(1)} °F</p>
-    <p>Wind Speed: ${windSpeed} MPH</p>
-    <p>Humidity: ${humidity}%</p>`;
+        forecastCard.innerHTML = `
+        <p>Date: ${date.toLocaleDateString()}</p>
+        <p>Weather: ${weatherIcon}</p>
+        <p>Temperature: ${temperature.toFixed(1)} °F</p>
+        <p>Wind Speed: ${windSpeed} MPH</p>
+        <p>Humidity: ${humidity}%</p>
+        `;
 
         forecastEl.appendChild(forecastCard);
     }
 }
-//     const weatherCard = document.createElement('div');
-//     weatherCard.classList.add('card');
-//     // Set the content of the card using the forecast data
-//     weatherCard.innerHTML = `
-//     <h2>${date.toDateString()}</h2>
-//     <p>Weather: ${weatherIcon}</p>
-//     <p>Temperature: ${temperature} °F</p>
-//     <p>Wind Speed: ${windSpeed} MPH</p>
-//     <p>Humidity: ${humidity}%</p>`;
-//     // Append the card
-//     forecastData.appendChild(weatherCard);
-//     // Append data to cards
-//     forecastEl.appendChild(forecastData);
-// }
-
-// Create cards using 5 day forecast
-// function addWeatherCard(weather) {
-//     const weatherCard = document.createElement("div");
-//     let weather = {
-//         // date: datepicker or autofill current date
-//         // icon: ⛅(cloudy), 🔆(sunny), 🌧️(rain), 🌨️(snow), ☃️(cold)
-//         // temperature: (current) in °F
-//         // wind: (current) in MPH
-//         // humidity:   %
-//     }
-//     weatherCard.appendChild(weather);
-//     forecast.appendChild(weatherCard);
-// }
-
-// // Function to add searches as li
-// function listSearchHistory() {
-//     const citySearched = document.createElement("div");
-// }
-// Update localStorage
 
 // Add event listeners - define city here
 const submitSearch = document.getElementById('search');

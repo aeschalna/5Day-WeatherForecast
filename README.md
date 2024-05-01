@@ -1,26 +1,18 @@
-Mod 6 Server-Side APIs Challenge: Weather Dashboard
+# Module 6 Challenge: Weather API Forecast
 
-Description: Create an application that displays the current weather & 5 day forecast for city entered by user
+## Description
+Build a dynamic application that retrieves & displays weather data from the OpenWeather API
 
-API used: https://openweathermap.org/forecast5
-Base URL: https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
-My Key: 6691a129dbf2864d60d7414c7fbc73e6
+## Usage
+This application takes in city names and generates the current weather, as well as a 5 day forecast. Cities searched are stored, and can be reaccessed conveniently from the search history column.
 
-USER STORY
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
+## Installation
+No install necessary, simply open the index.html file in your browser to use the weather forecaster.
 
-ACCEPTANCE CRITERIA
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the wind speed
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
+## Credits
+by Annie Schalnat @ https://github.com/fairybones
 
-LINK TO DEPLOYED APPLICATION
-https://aeschalna.github.io/5Day-WeatherForecast/
+## Link to Deployed Application
+
+
+## Screenshots
