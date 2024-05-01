@@ -13,6 +13,6 @@ No install necessary, simply open the index.html file in your browser to use the
 by Annie Schalnat @ https://github.com/fairybones
 
 ## Link to Deployed Application
-
+https://fairybones.github.io/5Day-WeatherForecast/
 
 ## Screenshots
